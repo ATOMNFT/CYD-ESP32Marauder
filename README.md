@@ -19,7 +19,7 @@
   <br>
   
   
-  <span style="color:red"> *Adjusted sd card portal storage*</span>
+  <span style="color:red">Adjusted sd card portal storage</span>
   I have tweaked a section of two files (EvilPortal.cpp & SDInterface) to allow the portals used in EP to be stored in a folder on the sd card instead of just being stored in the root folder. </b>
   
   <br> 
