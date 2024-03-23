@@ -1052,7 +1052,7 @@ void WiFiScan::RunAPScan(uint8_t scan_mode, uint16_t color)
     display_obj.tft.setRotation(1);
     
     #ifdef TFT_SHIELD
-      uint16_t calData[5] = { 391, 3491, 266, 3505, 7 }; // Landscape TFT Shield
+      uint16_t calData[5] = { 188, 3408, 286, 3498, 1 }; // Landscape TFT Shield
       Serial.println("Using TFT Shield");
     #else if defined(TFT_DIY)
       uint16_t calData[5] = { 213, 3469, 320, 3446, 1 }; // Landscape TFT DIY
@@ -1446,7 +1446,7 @@ void WiFiScan::RunPacketMonitor(uint8_t scan_mode, uint16_t color)
   
     #ifdef HAS_SCREEN
       #ifdef TFT_SHIELD
-        uint16_t calData[5] = { 391, 3491, 266, 3505, 7 }; // Landscape TFT Shield
+        uint16_t calData[5] = { 188, 3408, 286, 3498, 1 }; // Landscape TFT Shield
         Serial.println("Using TFT Shield");
       #else if defined(TFT_DIY)
         uint16_t calData[5] = { 213, 3469, 320, 3446, 1 }; // Landscape TFT DIY
@@ -1526,7 +1526,7 @@ void WiFiScan::RunEapolScan(uint8_t scan_mode, uint16_t color)
   
     #ifdef HAS_SCREEN
       #ifdef TFT_SHIELD
-        uint16_t calData[5] = { 391, 3491, 266, 3505, 7 }; // Landscape TFT Shield
+        uint16_t calData[5] = { 188, 3408, 286, 3498, 1 }; // Landscape TFT Shield
         //Serial.println("Using TFT Shield");
       #else if defined(TFT_DIY)
         uint16_t calData[5] = { 213, 3469, 320, 3446, 1 }; // Landscape TFT DIY
@@ -1625,7 +1625,7 @@ void WiFiScan::RunMimicFlood(uint8_t scan_mode, uint16_t color) {
       display_obj.tft.drawCentreString(" Mimic Flood ",120,16,2);
       display_obj.touchToExit();
     #endif
-    display_obj.tft.setTextColor(TFT_GREEN, TFT_BLACK);
+    display_obj.tft.setTextColor(TFT_YELLOW, TFT_BLACK);
   #endif
   
   packets_sent = 0;
@@ -1725,22 +1725,22 @@ void WiFiScan::executeSwiftpairSpam(EBLEPayloadType type) {
   #ifdef HAS_BT
     uint8_t macAddr[6];
     generateRandomMac(macAddr);
-
+    delay(5);
     esp_base_mac_addr_set(macAddr);
-
+    delay(5);
     NimBLEDevice::init("");
-
+    delay(5);
     NimBLEServer *pServer = NimBLEDevice::createServer();
-
+    delay(5);
     pAdvertising = pServer->getAdvertising();
-
+    delay(20);
     //NimBLEAdvertisementData advertisementData = getSwiftAdvertisementData();
     NimBLEAdvertisementData advertisementData = this->GetUniversalAdvertisementData(type);
     pAdvertising->setAdvertisementData(advertisementData);
     pAdvertising->start();
-    delay(10);
+    delay(1000);
     pAdvertising->stop();
-
+    delay(5);
     NimBLEDevice::deinit();
   #endif
 }

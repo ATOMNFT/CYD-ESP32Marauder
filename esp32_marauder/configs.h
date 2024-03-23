@@ -8,8 +8,8 @@
 
   //// BOARD TARGETS
   //#define MARAUDER_M5STICKC
-  #define MARAUDER_MINI
-  //#define MARAUDER_V4
+  //#define MARAUDER_MINI
+  #define MARAUDER_V4
   //#define MARAUDER_V6
   //#define MARAUDER_V6_1
   //#define MARAUDER_KIT
@@ -97,7 +97,7 @@
 
   #ifdef MARAUDER_V4
     //#define FLIPPER_ZERO_HAT
-    #define HAS_BATTERY
+    //#define HAS_BATTERY
     #define HAS_BT
     //#define HAS_BUTTONS
     #define HAS_NEOPIXEL_LED
@@ -105,7 +105,7 @@
     #define HAS_SCREEN
     #define HAS_SD
     #define USE_SD
-    #define HAS_TEMP_SENSOR
+    //#define HAS_TEMP_SENSOR
     #define HAS_GPS
   #endif
 
@@ -444,9 +444,9 @@
       #define GREENBUTTON_W (FRAME_W/2)
       #define GREENBUTTON_H FRAME_H
     
-      #define STATUSBAR_COLOR 0x4A49
+      #define STATUSBAR_COLOR 0x95E0 // Main Statusbar
     
-      #define KIT_LED_BUILTIN 13
+      #define KIT_LED_BUILTIN 17
     #endif
 
     #if defined(MARAUDER_V6) || defined(MARAUDER_V6_1)
@@ -820,7 +820,7 @@
   #if defined(USE_SD)
 
     #ifdef MARAUDER_V4
-      #define SD_CS 12
+      #define SD_CS 5
     #endif
 
     #ifdef MARAUDER_V6
@@ -972,8 +972,8 @@
       #define mac_history_len 512
     #elif defined(MARAUDER_V4)
       #define GPS_SERIAL_INDEX 2
-      #define GPS_TX 4
-      #define GPS_RX 13
+      #define GPS_TX 1
+      #define GPS_RX 3
       #define mac_history_len 512
     #elif defined(MARAUDER_KIT)
       #define GPS_SERIAL_INDEX 2

@@ -18,7 +18,7 @@ void EvilPortal::setup() {
 
   #ifdef HAS_SD
     if (sd_obj.supported) {
-      sd_obj.listDirToLinkedList(html_files, "/", "html");
+      sd_obj.listDirToLinkedList(html_files, "/portals", "html");
 
       Serial.println("Evil Portal Found " + (String)html_files->size() + " HTML files");
     }
@@ -45,7 +45,7 @@ String EvilPortal::get_password() {
 }
 
 void EvilPortal::setupServer() {
-  server.on("/", HTTP_GET, [this](AsyncWebServerRequest *request) {
+  server.on("/portals", HTTP_GET, [this](AsyncWebServerRequest *request) {
     request->send_P(200, "text/html", index_html);
     Serial.println("client connected");
     #ifdef HAS_SCREEN
@@ -72,7 +72,7 @@ void EvilPortal::setupServer() {
     }
     request->send(
       200, "text/html",
-      "<html><head><script>setTimeout(() => { window.location.href ='/' }, 100);</script></head><body></body></html>");
+      "<html><head><script>setTimeout(() => { window.location.href ='/portals/' }, 100);</script></head><body></body></html>");
   });
   Serial.println("web server up");
 }
@@ -93,16 +93,16 @@ bool EvilPortal::setHtml() {
   }
   Serial.println("Setting HTML...");
   #ifdef HAS_SD
-    File html_file = sd_obj.getFile("/" + this->target_html_name);
+    File html_file = sd_obj.getFile("/portals/" + this->target_html_name);
   #else
     File html_file;
   #endif
   if (!html_file) {
     #ifdef HAS_SCREEN
-      this->sendToDisplay("Could not find /" + this->target_html_name);
+      this->sendToDisplay("Could not find /portals" + this->target_html_name);
       this->sendToDisplay("Touch to exit...");
     #endif
-    Serial.println("Could not find /" + this->target_html_name + ". Use stopscan...");
+    Serial.println("Could not find /portals" + this->target_html_name + ". Use stopscan...");
     return false;
   }
   else {
@@ -144,17 +144,17 @@ bool EvilPortal::setAP(LinkedList<ssid>* ssids, LinkedList<AccessPoint>* access_
   // This means the file is last resort
   if ((ssids->size() <= 0) && (temp_ap_name == "")) {
     #ifdef HAS_SD
-      File ap_config_file = sd_obj.getFile("/ap.config.txt");
+      File ap_config_file = sd_obj.getFile("/portals/ap.config.txt");
     #else
       File ap_config_file;
     #endif
     // Could not open config file. return false
     if (!ap_config_file) {
       #ifdef HAS_SCREEN
-        this->sendToDisplay("Could not find /ap.config.txt.");
+        this->sendToDisplay("Could not find /portals/ap.config.txt.");
         this->sendToDisplay("Touch to exit...");
       #endif
-      Serial.println("Could not find /ap.config.txt. Use stopscan...");
+      Serial.println("Could not find /portals/ap.config.txt. Use stopscan...");
       return false;
     }
     // Config file good. Proceed

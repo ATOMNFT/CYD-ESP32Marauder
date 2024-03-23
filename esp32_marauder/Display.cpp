@@ -37,7 +37,7 @@ void Display::RunSetup()
   #ifdef HAS_ILI9341
 
     #ifdef TFT_SHIELD
-      uint16_t calData[5] = { 275, 3494, 361, 3528, 4 }; // tft.setRotation(0); // Portrait with TFT Shield
+      uint16_t calData[5] = { 350, 3465, 188, 3431, 2 }; // tft.setRotation(0); // Portrait with TFT Shield
       //Serial.println(F("Using TFT Shield"));
     #else if defined(TFT_DIY)
       uint16_t calData[5] = { 339, 3470, 237, 3438, 2 }; // tft.setRotation(0); // Portrait with DIY TFT
@@ -787,7 +787,7 @@ void Display::buildBanner(String msg, int xpos)
   this->tft.fillRect(0, STATUS_BAR_WIDTH, SCREEN_WIDTH, TEXT_HEIGHT, TFT_BLACK);
   this->tft.setFreeFont(NULL);           // Font 4 selected
   this->tft.setTextSize(BANNER_TEXT_SIZE);           // Font size scaling is x1
-  this->tft.setTextColor(TFT_WHITE, TFT_BLACK);  // Black text, no background colour
+  this->tft.setTextColor(TFT_YELLOW, TFT_BLACK);  // Black text, no background colour. HomeMenu Title
   this->showCenterText(msg, STATUS_BAR_WIDTH);
 
   /*
