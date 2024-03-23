@@ -13,4 +13,5 @@
   <br> 
   <b>The folder must be titled "portals" and I will include a zip with the folder and the ap.config file to upload directly to a sd card to use in the CYD</b>
   <br>
-  [Evil Portal Folder](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff)
+  
+  <a href="https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff" target="_blank">[Evil Portal Folder]</a>
