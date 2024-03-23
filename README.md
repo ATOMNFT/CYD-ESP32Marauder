@@ -10,7 +10,7 @@
   
   ## To install this fork of marauder
   <b>Head over to <a href=https://github.com/smoochiee/MARAUDER-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial.</a></b>
-  <b>Follow the steps provided by the legend himself and you should be good to go</b>
+  <b>Follow the steps provided by the legend himself and you should be good to go. I will be adding my own tutorial for flashing this build to your CYD very shortly.</b>
   
   <br>
   <br>
