@@ -1,8 +1,7 @@
 ![Header](pictures/mainheader.png)
 <br>
 
-<p align="center"><img alt="Custom Marauder logo" src="https://github.com/ATOMNFT/CYD-ESP32Marauder/blob/master/pictures/M8.jpeg" width="300"></p>
-<p align="center">
+
 
   <b>A beautiful fork of wifi Maraduer, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
   <b>This fork features a few great fixes and customzations.</b>
