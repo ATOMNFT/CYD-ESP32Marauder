@@ -1,6 +1,6 @@
 ![Header](pictures/mainheader.png)
 <br>
-# Custom ESP32 Marauder
+
 <p align="center"><img alt="Custom Marauder logo" src="https://github.com/ATOMNFT/CYD-ESP32Marauder/blob/master/pictures/M8.jpeg" width="300"></p>
 <p align="center">
 
