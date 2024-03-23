@@ -5,7 +5,8 @@
 
   <b>Files and repo not ready yet. I'm in process of testing a fix and uping things to this repo.</b>
   
-  <b>A suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display</b>
+  <b>A suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.
+  </b>
   <b>This fork features a few great fixes and customzations. <br>
   I have tweaked a section of two files (EvilPortal.cpp & SDInterface) to allow the portals used in EP to <br> be stored in a folder on<br>the sd card instead of just being stored in the root folder.</b>
   <br> 
