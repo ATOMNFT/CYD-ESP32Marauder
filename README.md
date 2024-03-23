@@ -4,7 +4,10 @@
 <p align="center">
   <b>A suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display</b>
   <b>This fork features a few great fixes and customzations. I have tweaked a section of two files (EvilPortal.cpp & SDInterface) to allow the portals used in EP to be stored in a folder on<br>the sd card instead of just being stored in the root folder.</b>
-  <br> <b>The folder must be titled "portals" and I will include a zip with the folder and the ap.config file. <br>
+  <br> 
+  <b>The folder must be titled "portals" and I will include a zip with the folder and the ap.config file. 
+  
+  <br>
   <a href="https://github.com/justcallmekoko/ESP32Marauder/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
   <a href="https://gitter.im/justcallmekoko/ESP32Marauder"><img alt="Gitter" src="https://badges.gitter.im/justcallmekoko/ESP32Marauder.png"/></a>
   <a href="https://github.com/justcallmekoko/ESP32Marauder/releases/latest"><img src="https://img.shields.io/github/downloads/justcallmekoko/ESP32Marauder/total" alt="Downloads"/></a>
