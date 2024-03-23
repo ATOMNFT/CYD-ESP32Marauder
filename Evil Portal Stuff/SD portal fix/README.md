@@ -1,8 +1,9 @@
 
   # Adjusted sd card portal storage
-  I have tweaked a section of two files (EvilPortal.cpp & SDInterface) to allow the portals used in EP to be stored in a folder on the sd card instead of just being stored in the root folder. 
+  <b>I have tweaked a section of two files (EvilPortal.cpp & SDInterface) to allow the portals used in EP to be stored in a folder on the sd card instead of just being stored in the root folder. </b>
   </b>
-  <b>If you are building to flash for a CYD, replace the two files in the zip with the files in your CYD-ESP32Marauder ide folder.</b>
+  </b>
+  <b>If you are building to flash for a CYD, use the two files in the zip above to replace the files in your ESP32Marauder folder.</b>
   <br> 
   
   <br>
