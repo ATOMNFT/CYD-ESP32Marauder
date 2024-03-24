@@ -22,7 +22,8 @@ Now on the step in smoochiee's tutorial where he mentions to download the source
 
 <br>
 
-<b>I am also looking into building a webflasher tool to make it super simple to install this build of Marauder.</b>
+## Web-flasher tool
+ <a href=https://atomnft.github.io/CM-Box/flash0.html>Custom Marauder Flasher tool for CYD</a>
   
   <br>
   <br>
