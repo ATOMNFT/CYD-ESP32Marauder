@@ -13,7 +13,7 @@
   
   
   
-  ## To install this fork of marauder
+  ## To build this fork of marauder from source
   <b>Head over to <a href=https://github.com/smoochiee/MARAUDER-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and start from step 1 in his tut. <br> 
 When you get to the "LIBRARIES" section you can use the libs he has linked or the ones in this repo which are the same.</b>
 <br>
@@ -24,15 +24,9 @@ Now on the step in smoochiee's tutorial where he mentions to download the source
 
 ## Web-flasher tool
  <a href=https://atomnft.github.io/CM-Box/flash0.html>Custom Marauder Flasher tool for CYD</a>
+  <b>Instructions are simple. Choose your hardware, and then hit connect.</b>
   
   <br>
-  <br>
-  
-  <b>A huge thank you goes to two wonderful people. Whom without I would have not made it as far as I  did learning.</b> <br>
-  <b>Thanks to <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> for all your guidance and late night replies.</b>
-  <b>And thank you to <a href=https://github.com/smoochiee>smoochiee</a> for helping with the bootscreen and the badass tuts for building our own Marauder.</b><br>
-  
-  
   <br>
   <br>
   
@@ -43,8 +37,13 @@ Now on the step in smoochiee's tutorial where he mentions to download the source
 
  - `Looking for Evil Portal storage fix` [Evil Portal SD fix](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff)
  
+ <br>
+ <br>
+ <br>
 
-
+<b>A huge thank you goes to two wonderful people. Whom without I would have not made it as far as I  did learning.</b> <br>
+  <b>Thanks to <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> for all your guidance and late night replies.</b>
+  <b>And thank you to <a href=https://github.com/smoochiee>smoochiee</a> for helping with the bootscreen and the badass tuts for building our own Marauder.</b><br>
 
 
   
