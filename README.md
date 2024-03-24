@@ -23,12 +23,11 @@
   <br>
   <br>
   
-  - `Looking for BLE swift pair fix` by [BLE FIX](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/BLE%20Swiftpair%20Fix)
-  ## Adjusted sd card portal storage
-  I have tweaked a section of two files (EvilPortal.cpp & SDInterface) to allow the portals used in EP to be stored in a folder on the sd card instead of just being stored in the root folder. </b>
   
-  <br> 
-  <b>The folder must be titled "portals" and I will include a zip with the folder and the ap.config file to upload directly to a sd card to use in the CYD</b>
-  <br>
-  
-  <a href="https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff" target="_blank">[Evil Portal sd card Folder]</a>
+  ## Fixes (These are included in this fork)
+  - `Looking for BLE swift pair fix` [BLE FIX](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/BLE%20Swiftpair%20Fix)
+<br>
+ - `Looking for Evil Portal storage fix` [Evil Portal SD fix](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff)
+ 
+<br>
+
