@@ -1,8 +1,9 @@
 ### Web-Tool for flashing this version of marauder to your CYD
 
-<esp-web-install-button
-  manifest="manifest.json"
-></esp-web-install-button>
+## Web Flasher Instructions
+- **Visit:** [CYM-Web-Flasher](https://github.com/ATOMNFT/CYD-ESP32Marauder/blob/master/flash0.html)
+
+- **Choose your hardware** and click **Connect** to start the flashing process.
 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=atomnft&label=Profile%20views&color=0e75b6&style=flat" alt="atomnft" /> </p>
