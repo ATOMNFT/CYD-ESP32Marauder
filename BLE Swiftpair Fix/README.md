@@ -8,7 +8,7 @@
 
 
 **Below is the necessary edits to make in WifiScan.cpp file for ble spam attacks to<br>
-not crash out.**  
+not crash out on the CYD or Cheap Yellow Display.**  
 
 
 
