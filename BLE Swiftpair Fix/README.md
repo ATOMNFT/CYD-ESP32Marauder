@@ -8,9 +8,9 @@
 
 
 **Below are the necessary edits to make in WifiScan.cpp file for ble spam attacks to<br>
-not crash out on the CYD or Cheap Yellow Display.**  
+not crash out on the CYD, also known as (Cheap Yellow Display).**  
 
-
+<b>These edits seem to have solved the crashes in ble attacks on the CYD. Delays were added as it seemed the memory was being affected by not having proper delays for this device's memory bank.</b>
 
 
 ## Non edited code.
