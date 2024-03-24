@@ -69,6 +69,7 @@ void WiFiScan::executeSwiftpairSpam(EBLEPayloadType type) {
     NimBLEDevice::deinit();
   #endif
 }
+```
 
 <br>
 <br>
