@@ -13,15 +13,6 @@ not crash out.**
 
 
 
-## Images
-
-![This is an alt text.](/image/sample.webp "This is a sample image.")
-
-## Links
-
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
-
-
 ## Non edited code.
 
 ```
