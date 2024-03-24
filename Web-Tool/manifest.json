@@ -5,10 +5,10 @@
       "chipFamily": "ESP32",
       "improv": false,
       "parts": [
-        { "path": "bootloader.bin", "offset": 4096 },
-        { "path": "partitions.bin", "offset": 32768 },
-        { "path": "ota.bin", "offset": 57344 },
-        { "path": "firmware.bin", "offset": 65536 }
+        { "path": "esp32_marauder.ino.bootloader.bin", "offset": 4096 },
+        { "path": "esp32_marauder.ino.partitions.bin", "offset": 32768 },
+        { "path": "esp32_marauder.ino.bin", "offset": 65536 },
+        { "path": "boot_app0.bin", "offset": 57344 }
       ]
     },
     {
