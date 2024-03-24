@@ -3,7 +3,7 @@
   "builds": [
     {
       "chipFamily": "ESP32",
-      "improv": true,
+      "improv": false,
       "parts": [
         { "path": "bootloader.bin", "offset": 4096 },
         { "path": "partitions.bin", "offset": 32768 },
