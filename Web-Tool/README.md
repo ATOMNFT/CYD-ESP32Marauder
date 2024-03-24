@@ -1,7 +1,7 @@
 ### Web-Tool for flashing this version of marauder to your CYD
 
 <esp-web-install-button
-  manifest="https://firmware.esphome.io/esp-web-tools/manifest.json"
+  manifest="manifest.json"
 ></esp-web-install-button>
 
 
