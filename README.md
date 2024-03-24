@@ -14,9 +14,15 @@
   
   
   ## To install this fork of marauder
-  
-  <b>Download or clone to your computer all the files located in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder>esp32_marauder</a>. 
-On the step in smoochiee's tutorial where he mentions to download the source code for marauder, use the files from <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder>esp32_marauder</a> instead. Then head back to <a href=https://github.com/smoochiee/MARAUDER-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and Follow the rest of the steps provided by the legend himself and you should be good to go. I will be adding my own tutorial for flashing this build to your CYD very shortly.</b>
+  <b>Head over to <a href=https://github.com/smoochiee/MARAUDER-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and start from step 1 in his tut. <br> 
+When you get to the "LIBRARIES" section you can use the libs he has linked or the ones in this repo which are the same.</b>
+<br>
+
+Now on the step in smoochiee's tutorial where he mentions to download the source code for marauder, use the files from <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder>esp32_marauder</a> instead. Then head back to <a href=https://github.com/smoochiee/MARAUDER-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and Follow the rest of the steps provided by the legend himself and you should be good to go. I will be adding my own tutorial for flashing this build to your CYD very shortly.</b>
+
+<br>
+
+<b>I am also looking into building a webflasher tool to make it super simple to install this build of Marauder.</b>
   
   <br>
   <br>
