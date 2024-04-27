@@ -4,8 +4,12 @@
 ## 🌟 Update Highlights 04/26/24 🌟
 <b>Wi-Fi Marauder has been updated to 13.10 These files refelect the new changes and updates!</b>
 
-  <b>A beautiful fork of wifi Marauder 13.10, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
-  <b>This fork features a few great fixes and customzations.</b>
+<hr>
+<br>
+
+
+<b>A beautiful fork of wifi Marauder 13.10, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
+<b>This fork features a few great fixes and customzations.</b>
   
   <br>
   
@@ -20,7 +24,7 @@
 
 ## Web-flasher tool
  <a href=https://atomnft.github.io/CM-Box/flash0.html>Custom Marauder Flasher tool for CYD</a>
-  <b>Instructions are simple. Choose your hardware, and then hit connect.</b>
+ <b>Instructions are simple. Choose your hardware, and then hit connect.</b>
   
   <br>
   <br>
