@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef LedInterface_h
 #define LedInterface_h
 

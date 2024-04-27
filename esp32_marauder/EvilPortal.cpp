@@ -92,11 +92,7 @@ bool EvilPortal::setHtml() {
     return true;
   }
   Serial.println("Setting HTML...");
-  #ifdef HAS_SD
-    File html_file = sd_obj.getFile("/portals/" + this->target_html_name);
-  #else
-    File html_file;
-  #endif
+  File html_file = sd_obj.getFile("/portals/" + this->target_html_name);
   if (!html_file) {
     #ifdef HAS_SCREEN
       this->sendToDisplay("Could not find /portals" + this->target_html_name);
@@ -143,11 +139,7 @@ bool EvilPortal::setAP(LinkedList<ssid>* ssids, LinkedList<AccessPoint>* access_
   // If there are no SSIDs and there are no APs selected, pull from file
   // This means the file is last resort
   if ((ssids->size() <= 0) && (temp_ap_name == "")) {
-    #ifdef HAS_SD
-      File ap_config_file = sd_obj.getFile("/portals/ap.config.txt");
-    #else
-      File ap_config_file;
-    #endif
+    File ap_config_file = sd_obj.getFile("/portals/ap.config.txt");
     // Could not open config file. return false
     if (!ap_config_file) {
       #ifdef HAS_SCREEN
@@ -242,13 +234,10 @@ bool EvilPortal::setAP(LinkedList<ssid>* ssids, LinkedList<AccessPoint>* access_
 }
 
 void EvilPortal::startAP() {
-  const IPAddress AP_IP(172, 0, 0, 1);
-
   Serial.print("starting ap ");
   Serial.println(apName);
 
   WiFi.mode(WIFI_AP);
-  WiFi.softAPConfig(AP_IP, AP_IP, IPAddress(255, 255, 255, 0));
   WiFi.softAP(apName);
 
   #ifdef HAS_SCREEN

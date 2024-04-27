@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef BatteryInterface_h
 #define BatteryInterface_h
 

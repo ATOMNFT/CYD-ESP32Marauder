@@ -12,7 +12,7 @@ HardwareSerial Serial2(GPS_SERIAL_INDEX);
 
 void GpsInterface::begin() {
 
-  /*#ifdef MARAUDER_MINI
+  #ifdef MARAUDER_MINI
     pinMode(26, OUTPUT);
 
     delay(1);
@@ -22,7 +22,7 @@ void GpsInterface::begin() {
 
     Serial.println("Activated GPS");
     delay(100);
-  #endif*/
+  #endif
 
   
   Serial2.begin(9600, SERIAL_8N1, GPS_TX, GPS_RX);
@@ -37,13 +37,8 @@ void GpsInterface::begin() {
   if (Serial2.available()) {
     Serial.println("GPS Attached Successfully");
     this->gps_enabled = true;
-    while (Serial2.available()) {
-      //Fetch the character one by one
-      char c = Serial2.read();
-      //Serial.print(c);
-      //Pass the character to the library
-      nmea.process(c);
-    }
+    while (Serial2.available())
+      Serial2.read();
   }
   else {
     this->gps_enabled = false;
@@ -528,10 +523,6 @@ String GpsInterface::getDatetime() {
 
 String GpsInterface::getNumSatsString() {
   return (String)num_sats;
-}
-
-int GpsInterface::getNumSats() {
-  return num_sats;
 }
 
 bool GpsInterface::getFixStatus() {
