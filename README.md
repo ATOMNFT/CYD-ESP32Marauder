@@ -52,6 +52,7 @@
  <br>
  <br>
 
+## Shoutouts! 📢
 <b>A huge thank you goes to two wonderful people whom without I would have not made it as far as I  did learning.</b> 
 <br>
 <b>Thanks to <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> for all your guidance and late night replies.</b>
