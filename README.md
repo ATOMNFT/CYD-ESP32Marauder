@@ -1,8 +1,9 @@
 ![Header](pictures/mainheader.png)
 <br>
 
-## 🌟 Update Highlights 04/26/24 🌟
+## 🌟 Update Highlights 04/28/24 🌟
 <b>Wi-Fi Marauder has been updated to 13.10 These files refelect the new changes and updates!</b>
+<b>RGB is now working for sniffing and attacks thanks to <a href=https://github.com/lsdlsd88>lsdlsd88</a> and <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> </b>
 
 <hr>
 <br>
@@ -48,7 +49,9 @@
 
 <b>A huge thank you goes to two wonderful people. Whom without I would have not made it as far as I  did learning.</b> <br>
 <b>Thanks to <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> for all your guidance and late night replies.</b>
-<b>And thank you to <a href=https://github.com/smoochiee>smoochiee</a> for helping with the bootscreen and the badass tuts for building our own Marauder.</b><br>
+<b>And thank you to <a href=https://github.com/smoochiee>smoochiee</a> for helping with the bootscreen and the badass tuts for building our own Marauder.</b>
+<b>Also thanks to 3DJoe for figuring out the touch functions for marauder on the CYD..</b>
+<br>
 
 
   
