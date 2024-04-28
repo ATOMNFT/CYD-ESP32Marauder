@@ -38,6 +38,10 @@
   - `BLE swift pair fix` [BLE FIX](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/BLE%20Swiftpair%20Fix)
 
   - `Evil Portal storage fix` [Evil Portal SD fix](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff)
+  
+  - `RGB LED fix` [RGB LED fix]( https://github.com/lsdlsd88/ESP32-Marauder-Cheap-Yellow-Display/commit/2b206c2deac19cdd6e9836a7d4e7446e263ac672?diff=split&w=0#diff-9bf7e9e1cf160aa5fb95103a7c21a502bc264a3d66a0b9f48e646781af0d4d81)
+  
+ 
  
  <br>
  
