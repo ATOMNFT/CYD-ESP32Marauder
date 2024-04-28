@@ -48,9 +48,12 @@
  <br>
  <br>
 
-<b>A huge thank you goes to two wonderful people. Whom without I would have not made it as far as I  did learning.</b> <br>
+<b>A huge thank you goes to two wonderful people whom without I would have not made it as far as I  did learning.</b> 
+<br>
 <b>Thanks to <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> for all your guidance and late night replies.</b>
+<br>
 <b>And thank you to <a href=https://github.com/smoochiee>smoochiee</a> for helping with the bootscreen and the badass tuts for building our own Marauder.</b>
+<br>
 <b>Also thanks to 3DJoe for figuring out the touch functions for marauder on the CYD..</b>
 <br>
 
