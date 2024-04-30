@@ -5,14 +5,11 @@
   along with all the pcaps and other files captured.</b>
   
   <br>
-  <br>
-  
+ 
   <b>The folder titled "portals is to be added to the root of your sd card. It contains the ap.config file, a file titled "index.html", and a few smaller sized portals. Download the zip file and unzip it. Drag or copy/paste the folder titled "portals" to the root of your sd card. </b>
   
   <br>
-  <br> 
   
   <b>The sd fix is included in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder> this sketch for the CYD.</a></b>
  
-  <br>
 
