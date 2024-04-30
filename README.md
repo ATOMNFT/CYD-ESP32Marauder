@@ -44,6 +44,12 @@ Check <a href=https://github.com/justcallmekoko/ESP32Marauder/wiki/gps-modificat
 
 <hr>
 <br>
+
+## SD portal fix
+  <b> This fix is to relocate all the portals for evil portal to a folder on the sd card. When you install Marauder on the CYD all the protals used in evil portal get stored on the root of the sd card. To me this is a nuisance as all the pcap and other files that are captured while sniffing get thrown on the root of the sd as well. I have gone through and adjusted the code so you may create a folder titled "portals" and store the html files there.<br>In the <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal</a> section are the files needed along with directions on usage. </b>
+ 
+<hr>
+<br>
   
 ## To build this fork of Marauder from source
 
@@ -62,13 +68,6 @@ Check <a href=https://github.com/justcallmekoko/ESP32Marauder/wiki/gps-modificat
   <br>
   <br>
  
-## SD portal fix
-  <b> This fix is to relocate all the portals for evil portal to a folder on the sd card. When you install Marauder on the CYD all the protals used in evil portal get stored on the root of the sd card. To me this is a nuisance as all the pcap and other files that are captured while sniffing get thrown on the root of the sd as well. I have gone through and adjusted the code so you may create a folder titled "portals" and store the html files there.<br>In the <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal</a> section are the files needed along with directions on usage. </b>
- 
- <br>
- <br>
-
-
 ## Shoutouts! 📢
 <b>A huge thank you goes to two wonderful people whom without I would have not made it as far as I  did learning.</b> 
 <br>
