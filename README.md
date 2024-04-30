@@ -1,10 +1,21 @@
 ![Header](pictures/mainheader.png)
 <br>
 
-## 🆕 Update Highlights 04/28/24 🆕
-<b>Wi-Fi Marauder has been updated to 13.10 These files refelect the new changes and updates!</b>
-<br>
-<b>RGB LED (on back of CYD) is now working for sniffing and attacks thanks to <a href=https://github.com/lsdlsd88>lsdlsd88</a> and <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> </b>
+<div align="center">
+  
+  ## 🎩 Update Highlights 04/26/24 — Marauder v0.13.10 🎩
+
+</div>
+
+- **RGB LED enabled for builds w/o GPS thanks to [**lsdlsd88**](https://github.com/lsdlsd88)**
+
+- **Detect Pwnagotchi [enabled](https://github.com/Fr4nkFletcher/ESP32-Marauder-Cheap-Yellow-Display/blob/master/screenshots/pwn2.jpg) in the WiFi Sniffers submenu. (currently for builds without GPS. Fix hopefully soon)**
+    
+- **SwiftPair Spam now 100% functional** — Samsung, Google, and BLE spam crashing should now be nonexistent.
+
+- **<a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal storage adjustment</a>** — Moves all portals into a folder instead of root of sd card.
+
+- **For info on adding an external antenna, click [here](https://github.com/Fr4nkFletcher/ESP32-Marauder-Cheap-Yellow-Display/blob/master/AntennaMod.md).**
 
 <hr>
 <br>
