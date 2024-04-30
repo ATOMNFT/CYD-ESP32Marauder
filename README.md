@@ -52,6 +52,7 @@ Check <a href=https://github.com/justcallmekoko/ESP32Marauder/wiki/gps-modificat
 - Now on the step in smoochiee's tutorial where he mentions to download the source code for Marauder, use the files from <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder>esp32_marauder</a> instead (These files contain the sketch edits already). Then head back to <a href=https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and Follow the rest of the steps provided by the legend himself and you should be good to go. I will be adding my own tutorial for flashing this build to your CYD very shortly.
 
 <br>
+<hr>
 
 ## Web-flasher tool for simple install
  <a href=https://atomnft.github.io/CM-Box/flash0.html>Custom Marauder Flasher tool for CYD</a>
