@@ -645,6 +645,8 @@ void WiFiScan::startWiFiAttacks(uint8_t scan_mode, uint16_t color, String title_
   this->wifi_initialized = true;
   #ifdef MARAUDER_FLIPPER
     flipper_led.attackLED();
+	#elif defined(MARAUDER_V4)
+    flipper_led.attackLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.attackLED();
   #elif defined(MARAUDER_M5STICKC)
@@ -669,6 +671,8 @@ bool WiFiScan::shutdownWiFi() {
     esp_wifi_deinit();
 
     #ifdef MARAUDER_FLIPPER
+      flipper_led.offLED();
+	  #elif defined(MARAUDER_V4)
       flipper_led.offLED();
     #elif defined(XIAO_ESP32_S3)
       xiao_led.offLED();
@@ -696,6 +700,8 @@ bool WiFiScan::shutdownBLE() {
       NimBLEDevice::deinit();
 
       #ifdef MARAUDER_FLIPPER
+        flipper_led.offLED();
+		#elif defined(MARAUDER_V4)
         flipper_led.offLED();
       #elif defined(XIAO_ESP32_S3)
         xiao_led.offLED();
@@ -1139,7 +1145,9 @@ void WiFiScan::RunEvilPortal(uint8_t scan_mode, uint16_t color)
   startLog("evil_portal");
 
   #ifdef MARAUDER_FLIPPER
-    flipper_led.sniffLED();
+    flipper_led.sniffLED();    
+  #elif defined(MARAUDER_V4)
+  flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
   #elif defined(MARAUDER_M5STICKC)
@@ -1182,6 +1190,8 @@ void WiFiScan::RunAPScan(uint8_t scan_mode, uint16_t color)
   startPcap("ap");
 
   #ifdef MARAUDER_FLIPPER
+    flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
@@ -1608,6 +1618,8 @@ void WiFiScan::RunPacketMonitor(uint8_t scan_mode, uint16_t color)
 {
   #ifdef MARAUDER_FLIPPER
     flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
+    flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
   #elif defined(MARAUDER_M5STICKC)
@@ -1686,6 +1698,8 @@ void WiFiScan::RunPacketMonitor(uint8_t scan_mode, uint16_t color)
 void WiFiScan::RunEapolScan(uint8_t scan_mode, uint16_t color)
 {
   #ifdef MARAUDER_FLIPPER
+    flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
@@ -1827,6 +1841,8 @@ void WiFiScan::RunPwnScan(uint8_t scan_mode, uint16_t color)
   startPcap("pwnagotchi");
 
   #ifdef MARAUDER_FLIPPER
+    flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
@@ -2021,6 +2037,8 @@ void WiFiScan::RunBeaconScan(uint8_t scan_mode, uint16_t color)
 
   #ifdef MARAUDER_FLIPPER
     flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
+    flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
   #elif defined(MARAUDER_M5STICKC)
@@ -2080,6 +2098,8 @@ void WiFiScan::RunStationScan(uint8_t scan_mode, uint16_t color)
 
   #ifdef MARAUDER_FLIPPER
     flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
+    flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
   #elif defined(MARAUDER_M5STICKC)
@@ -2123,6 +2143,8 @@ void WiFiScan::RunRawScan(uint8_t scan_mode, uint16_t color)
     startPcap("raw");
 
   #ifdef MARAUDER_FLIPPER
+    flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
@@ -2169,6 +2191,8 @@ void WiFiScan::RunDeauthScan(uint8_t scan_mode, uint16_t color)
   startPcap("deauth");
 
   #ifdef MARAUDER_FLIPPER
+    flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
@@ -2228,6 +2252,8 @@ void WiFiScan::RunProbeScan(uint8_t scan_mode, uint16_t color)
   }
 
   #ifdef MARAUDER_FLIPPER
+    flipper_led.sniffLED();
+  #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
   #elif defined(XIAO_ESP32_S3)
     xiao_led.sniffLED();
