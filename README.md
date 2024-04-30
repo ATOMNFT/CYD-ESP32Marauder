@@ -33,8 +33,17 @@ Successfully tested on both of these devices:
 - [CYD variant 2](https://amazon.com/dp/B0CLR7MQ91)
 
 No hardware modifications required thanks to integration with **@ggaljoen's** [TFT_eSPI](https://github.com/ggaljoen/TFT_eSPI) fork.
-  
-  <br>
+
+<hr>
+
+## GPS Functionality
+
+- **🛰 GPS is enabled on builds not labled (NoGPS) in the flasher tool and it is fully operational through the 4-pin connector located near the MicroUSB port of the CYD module. 
+<br>
+Check <a href=https://github.com/justcallmekoko/ESP32Marauder/wiki/gps-modification>HERE</a> for details on supported GPS hardware.
+
+<hr>
+<br>
   
 ## To build this fork of Marauder from source
 
