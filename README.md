@@ -21,11 +21,20 @@
 <br>
 
 
-<b>A beautiful fork of wifi Marauder 13.10, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
+<b>A beautiful fork of wifi Marauder v0.13.10, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
 <b>This fork features a few great fixes and customzations.</b>
   
   <br>
   
+  ## Device Compatibility
+
+Successfully tested on both of these devices:
+- [CYD variant 1](https://amazon.com/dp/B0BVFXR313)
+- [CYD variant 2](https://amazon.com/dp/B0CLR7MQ91)
+
+No hardware modifications required thanks to integration with **@ggaljoen's** [TFT_eSPI](https://github.com/ggaljoen/TFT_eSPI) fork.
+  
+  <br>
   
 ## To build this fork of Marauder from source
 
@@ -41,27 +50,13 @@
   
   <br>
   <br>
-  <br>
-  
-  
-## Fixes (These are included in this fork)
-  
-  - `BLE swift pair fix` [BLE FIX](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/BLE%20Swiftpair%20Fix)
-
-  - `Evil Portal storage fix` [Evil Portal SD fix](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff)
-  
-  - `RGB LED fix` [RGB LED fix]( https://github.com/lsdlsd88/ESP32-Marauder-Cheap-Yellow-Display/commit/2b206c2deac19cdd6e9836a7d4e7446e263ac672?diff=split&w=0#diff-9bf7e9e1cf160aa5fb95103a7c21a502bc264a3d66a0b9f48e646781af0d4d81)
-  
- 
- 
- <br>
  
 ## SD portal fix
   <b> This fix is to relocate all the portals for evil portal to a folder on the sd card. When you install Marauder on the CYD all the protals used in evil portal get stored on the root of the sd card. To me this is a nuisance as all the pcap and other files that are captured while sniffing get thrown on the root of the sd as well. I have gone through and adjusted the code so you may create a folder titled "portals" and store the html files there.<br>In the <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal</a> section are the files needed along with directions on usage. </b>
  
  <br>
  <br>
- <br>
+
 
 ## Shoutouts! 📢
 <b>A huge thank you goes to two wonderful people whom without I would have not made it as far as I  did learning.</b> 
