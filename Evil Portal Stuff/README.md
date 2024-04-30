@@ -12,8 +12,7 @@
   <br>
   <br> 
   
-  <b>The sd fix is included in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder>this</a> build. </b>
-  <b>I'm not sure if other devices face this issue as I do not own a JCMKK box. But your more than welcome to test if your portals are stored in root sd.</b>
-  
+  <b>The sd fix is included in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder>this</a> build for the CYD.</b>
+ 
   <br>
 
