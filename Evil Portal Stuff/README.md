@@ -10,6 +10,6 @@
   
   <br>
   
-  <b>The sd fix is included in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder> this sketch for the CYD.</a></b>
+  <b>The sd adjustment/fix is included in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/esp32_marauder> this sketch for the CYD if you plan to build from source.</a></b>
  
 
