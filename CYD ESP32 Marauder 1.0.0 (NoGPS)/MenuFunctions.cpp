@@ -1401,13 +1401,13 @@ void MenuFunctions::RunSetup()
       wifi_scan_obj.StartScan(WIFI_PACKET_MONITOR, TFT_BLUE);
     });
   #endif
-  #ifndef HAS_ILI9341
+  //#ifndef HAS_ILI9341 // Commented out for detect pwnagotchi menu entry to appear
     this->addNodes(&wifiSnifferMenu, text_table1[47], TFT_RED, NULL, PWNAGOTCHI, [this]() {
       display_obj.clearScreen();
       this->drawStatusBar();
       wifi_scan_obj.StartScan(WIFI_SCAN_PWN, TFT_RED);
     });
-  #endif
+  //#endif // Commented out for detect pwnagotchi menu entry to appear
   this->addNodes(&wifiSnifferMenu, text_table1[49], TFT_MAGENTA, NULL, BEACON_SNIFF, [this]() {
     display_obj.clearScreen();
     this->drawStatusBar();
