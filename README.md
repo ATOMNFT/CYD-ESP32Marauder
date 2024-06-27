@@ -3,7 +3,7 @@
 
 <div align="center">
   
-  ## ⬆ Update Highlights 06/27/24 ⬆ — Added New v1.0.0 along with Marauder v0.13.10
+  ## ⬆ Update Highlights 06/27/24 ⬆ <br> Added New v1.0.0 along with Marauder v0.13.10
 
 </div>
 
