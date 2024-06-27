@@ -54,7 +54,7 @@ Check <a href=https://github.com/justcallmekoko/ESP32Marauder/wiki/gps-modificat
 
 - Head over to <a href=https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and start from step 1 in his tut.
 - When you get to the "LIBRARIES" section you can use the libs he has linked or the ones in this repo which are the same.
-- Now on the step in smoochiee's tutorial where he mentions to download the source code for Marauder, use the files from  <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%2013.10%20(NoGPS)>esp32_marauder</a> instead (These files contain the sketch edits already). Then head back to <a href=https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and Follow the rest of the steps provided by the legend himself and you should be good to go. I will be adding my own tutorial for flashing this build to your CYD very shortly.
+- Now on the step in smoochiee's tutorial where he mentions to download the source code for Marauder, use the files from  <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%2013.10%20(NoGPS)>CYD ESP32 Marauder 13.10 (NoGPS)</a> or <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%201.0.0%20(NoGPS)>CYD ESP32 Marauder 1.0.0 (NoGPS)</a> instead (These files contain the sketch edits already). Then head back to <a href=https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and Follow the rest of the steps provided by the legend himself and you should be good to go. I will be adding my own tutorial for flashing this build to your CYD very shortly.
 
 <br>
 <hr>
