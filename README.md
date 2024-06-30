@@ -79,6 +79,7 @@ If you flashed from the <a href=https://atomnft.github.io/CM-Box/flash0.html>Cus
 <br>
 <b>Also thanks to 3DJoe for figuring out the touch functions for marauder on the CYD..</b>
 <br>
+And of course the man <a href=https://github.com/justcallmekoko>JustCallMeKoko</a>for the foundational work on ESP32 Marauder.
 
 
   
