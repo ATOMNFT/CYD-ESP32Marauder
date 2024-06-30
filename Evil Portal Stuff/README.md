@@ -4,6 +4,9 @@
   <b>I have tweaked a section of two files (EvilPortal.cpp & SDInterface.h) to allow the portals used in EP to be stored in a folder on the sd card instead of just being stored in the root of sd card
   along with all the pcaps and other files captured.</b>
   
+  ## Setup
+  You must create a folder on the root of your sd card titled "portals". This is where you will store the html files along with the index.html file.
+  
   <br>
  
   <b>The folder titled "portals is to be added to the root of your sd card. It contains the ap.config file, a file titled "index.html", and a few smaller sized portals. Download the zip file and unzip it. Drag or copy/paste the folder titled "portals" to the root of your sd card. </b>
