@@ -13,6 +13,6 @@
   
   <br>
   
-  <b>The sd adjustment/fix is included in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%2013.10%20(NoGPS)> this sketch for the CYD.</a>  if you plan to build from source</b>
+  <b>The sd adjustment/fix is included in <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master> this sketch for the CYD.</a>  if you plan to build from source</b>
  
 
