@@ -62,7 +62,7 @@ If you flashed from the <a href=https://atomnft.github.io/CM-Box/flash0.html>Cus
 <hr>
 <br>
   
-## To build this fork of Marauder from source
+## 🔧 To build this fork of Marauder from source 🔧
 
 - Head over to <a href=https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and start from step 1 in his tut.
 - When you get to the "LIBRARIES" section you can use the libs he has linked or the ones in this repo which are the same.
