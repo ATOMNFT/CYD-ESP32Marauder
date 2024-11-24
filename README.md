@@ -10,22 +10,22 @@
 
 <div align="center">
   
-  ## ⬆ Update Highlights 06/27/24 ⬆ <br> Added New v1.0.0 along with Marauder v0.13.10
+  ## ⬆ Update Highlights 11/23/24 ⬆ <br> Added New v1.1.0!
   
 
 </div>
 
-- **RGB LED enabled for builds w/o GPS thanks to [**lsdlsd88**](https://github.com/lsdlsd88)**
+- **RGB LED enabled thanks to [**lsdlsd88**](https://github.com/lsdlsd88)**
 
-- **Detect Pwnagotchi [enabled](https://github.com/Fr4nkFletcher/ESP32-Marauder-Cheap-Yellow-Display/blob/master/screenshots/pwn2.jpg) in the WiFi Sniffers submenu. (currently for builds without GPS. Fix hopefully soon)**
+- **Detect Pwnagotchi 100% functional**
     
-- **SwiftPair Spam now 100% functional** — Samsung, Google, and BLE spam crashing should now be nonexistent.
+- **BLE/SwiftPair Spam now 100% functional**
 
 - **<a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal storage adjustment</a>** — Moves all portals into a folder instead of root of sd card.
 
 - **For info on adding an external antenna, click [here](https://github.com/Fr4nkFletcher/ESP32-Marauder-Cheap-Yellow-Display/blob/master/AntennaMod.md).**
 <br>
-<b>A beautiful fork of wifi Marauder v0.13.10, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
+<b>A beautiful fork of wifi Marauder, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
 <b>This fork features a few great fixes and customzations.</b>
 
 <hr>
@@ -43,7 +43,9 @@ No hardware modifications required thanks to integration with **@ggaljoen's** [T
 
 ## 📡 GPS Functionality 📡
 
-- GPS is enabled on builds not labled (NoGPS) in the flasher tool and it is fully operational through the 4-pin connector located near the MicroUSB port of the CYD module. 
+- GPS is enabled on builds 13.10 & 1.0.0 not labled (NoGPS) in the flasher tool and it is fully operational through the 4-pin connector located near the MicroUSB port of the CYD module. 
+<br>
+For build 1.1.0 GPS is fully working with no confilcts affecting led or detect pwnagotchi.
 <br>
 Check <a href=https://github.com/justcallmekoko/ESP32Marauder/wiki/gps-modification>HERE</a> for details on supported GPS hardware.
 
