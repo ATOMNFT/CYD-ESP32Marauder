@@ -71,7 +71,7 @@ If you flashed from the <a href=https://atomnft.github.io/CM-Box/flash0.html>Cus
 <br>
 <hr>
 
-## Web-flasher tool for simple install
+## ⚡ Web-flasher tool for simple install ⚡
  <a href=https://atomnft.github.io/CM-Box/flash0.html>Custom Marauder Flasher tool for CYD</a>
  <br>
  <b>Instructions are simple. Choose your hardware, then hit connect to start the flashing process on your CYD</b>
@@ -79,7 +79,7 @@ If you flashed from the <a href=https://atomnft.github.io/CM-Box/flash0.html>Cus
   <br>
   <br>
  
-## Shoutouts! 📢
+## 📢 Shoutouts! 📢
 <b>A huge thank you goes to two wonderful people whom without I would have not made it as far as I  did learning.</b> 
 <br>
 <b>Thanks to <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a> for all your guidance and late night replies.</b>
@@ -89,8 +89,3 @@ If you flashed from the <a href=https://atomnft.github.io/CM-Box/flash0.html>Cus
 <b>Also thanks to 3DJoe for figuring out the touch functions for marauder on the CYD..</b>
 <br>
 And of course the man <a href=https://github.com/justcallmekoko>JustCallMeKoko</a>for the foundational work on ESP32 Marauder.
-
-
-  
-  
-  
