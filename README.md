@@ -31,7 +31,7 @@
 <hr>
 <br>
   
-  ## Device Compatibility
+## Device Compatibility
 
 Successfully tested on both of these devices:
 - [CYD variant 1](https://amazon.com/dp/B0BVFXR313)
