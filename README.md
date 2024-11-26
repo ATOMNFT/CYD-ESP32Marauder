@@ -12,6 +12,15 @@
   
   ## ⬆ Update Highlights 11/23/24 ⬆ <br> Added New v1.1.0!
   
+- Add commands for sniffing airtags
+- Add ability to spoof airtags
+- Add commands for listing and spoofing airtags
+- Update NimBLE version from v1.2.0 to v1.3.5
+- Add Flipper Zero Sniff
+- Add commands for Flipper Zero Sniff
+- Add icon for Flipper Zero Sniff
+- Externalize some utils
+  
 
 </div>
 
