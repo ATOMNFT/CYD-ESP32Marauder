@@ -8,11 +8,7 @@
   
 ---
 
-<div align="center">
-  
   ## ⬆ Update Highlights 11/23/24 ⬆ <br> Added New v1.1.0!
-
-</div>
 
 - Add commands for sniffing airtags
 - Add ability to spoof airtags
