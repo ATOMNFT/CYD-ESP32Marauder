@@ -42,7 +42,7 @@ https://www.online-utility.org/image/convert/to/XBM
   #include "xiaoLED.h"
 #elif defined(MARAUDER_M5STICKC)
   #include "stickcLED.h"
-#else
+#elif defined(HAS_NEOPIXEL_LED)
   #include "LedInterface.h"
 #endif
 
@@ -109,7 +109,7 @@ CommandLine cli_obj;
 
 #ifdef MARAUDER_FLIPPER
   flipperLED flipper_led;
-  #elif defined(MARAUDER_V4)
+#elif defined(MARAUDER_V4)
   flipperLED flipper_led;
 #elif defined(XIAO_ESP32_S3)
   xiaoLED xiao_led;
@@ -157,6 +157,11 @@ void setup()
 {
   #ifdef MARAUDER_M5STICKC
     axp192_obj.begin();
+  #endif
+
+  #if defined(MARAUDER_M5STICKCP2) // Prevent StickCP2 from turning off when disconnect USB cable
+    pinMode(POWER_HOLD_PIN, OUTPUT);
+    digitalWrite(POWER_HOLD_PIN, HIGH);
   #endif
   
   #ifdef HAS_SCREEN
@@ -207,9 +212,10 @@ void setup()
   */
 
   #ifdef HAS_SCREEN
-    display_obj.tft.drawCentreString("ESP32 Marauder", TFT_WIDTH/2, TFT_HEIGHT * 0.33, 1);
-    display_obj.tft.drawCentreString("JustCallMeKoko", TFT_WIDTH/2, TFT_HEIGHT * 0.5, 1);
-    display_obj.tft.drawCentreString(display_obj.version_number, TFT_WIDTH/2, TFT_HEIGHT * 0.66, 1);
+    display_obj.tft.drawCentreString("ESP32 Marauder", TFT_WIDTH/1.25, TFT_HEIGHT * 0.10, 1);
+    display_obj.tft.drawCentreString("JustCallMeKoko", TFT_WIDTH/1.25, TFT_HEIGHT * 0.17, 1);
+    display_obj.tft.drawCentreString(display_obj.version_number, TFT_WIDTH/1.25, TFT_HEIGHT * 0.24, 1);
+    display_obj.tft.drawCentreString("Ported by ATOMNFT", TFT_WIDTH/1.25, TFT_HEIGHT * 0.36, 1); // Added this line
   #endif
 
 
@@ -269,7 +275,7 @@ void setup()
 
   #ifdef HAS_SCREEN
     display_obj.tft.setTextColor(TFT_GREEN, TFT_BLACK);
-    display_obj.tft.drawCentreString("Initializing...", TFT_WIDTH/2, TFT_HEIGHT * 0.82, 1);
+    display_obj.tft.drawCentreString("Initializing...", TFT_WIDTH/1.25, TFT_HEIGHT * 0.44, 1);
   #endif
 
   evil_portal_obj.setup();

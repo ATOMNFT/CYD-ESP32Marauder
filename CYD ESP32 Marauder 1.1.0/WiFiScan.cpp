@@ -10,6 +10,7 @@ LinkedList<ssid>* ssids;
 LinkedList<AccessPoint>* access_points;
 LinkedList<Station>* stations;
 LinkedList<AirTag>* airtags;
+LinkedList<Flipper>* flippers;
 
 extern "C" int ieee80211_raw_frame_sanity_check(int32_t arg, int32_t arg2, int32_t arg3){
     if (arg == 31337)
@@ -275,6 +276,76 @@ extern "C" {
             #endif
           }
         }
+        else if (wifi_scan_obj.currentScanMode == BT_SCAN_FLIPPER) {
+          uint8_t* payLoad = advertisedDevice->getPayload();
+          size_t len = advertisedDevice->getPayloadLength();
+
+          bool match = false;
+          String color = "";
+          for (int i = 0; i <= len - 4; i++) {
+            if (payLoad[i] == 0x81 && payLoad[i+1] == 0x30) {
+              match = true;
+              color = "Black";
+              break;
+            }
+            if (payLoad[i] == 0x82 && payLoad[i+1] == 0x30) {
+              match = true;
+              color = "White";
+              break;
+            }
+            if (payLoad[i] == 0x83 && payLoad[i+1] == 0x30) {
+              color = "Transparent";
+              match = true;
+              break;
+            }
+          }
+
+          if (match) {
+            String mac = advertisedDevice->getAddress().toString().c_str();
+            String name = advertisedDevice->getName().c_str();
+            mac.toUpperCase();
+
+            for (int i = 0; i < flippers->size(); i++) {
+              if (mac == flippers->get(i).mac)
+                return;
+            }
+
+            int rssi = advertisedDevice->getRSSI();
+            Serial.print("RSSI: ");
+            Serial.print(rssi);
+            Serial.print(" MAC: ");
+            Serial.println(mac);
+            Serial.print("Name: ");
+            Serial.println(name);
+
+            Flipper flipper;
+            flipper.mac = mac;
+            flipper.name = name;
+
+            flippers->add(flipper);
+
+
+            /*#ifdef HAS_SCREEN
+              //display_string.concat("RSSI: ");
+              display_string.concat((String)rssi);
+              display_string.concat(" Flipper: ");
+              display_string.concat(name);
+              uint8_t temp_len = display_string.length();
+              for (uint8_t i = 0; i < 40 - temp_len; i++)
+              {
+                display_string.concat(" ");
+              }
+              display_obj.display_buffer->add(display_string);
+            #endif*/
+
+            #ifdef HAS_SCREEN
+              display_obj.display_buffer->add(String("Flipper: ") + name + ",                 ");
+              display_obj.display_buffer->add("       MAC: " + String(mac) + ",             ");
+              display_obj.display_buffer->add("      RSSI: " + String(rssi) + ",               ");
+              display_obj.display_buffer->add("     Color: " + String(color) + "                ");
+            #endif
+          }
+        }
         else if (wifi_scan_obj.currentScanMode == BT_SCAN_ALL) {
           if (buf >= 0)
           {
@@ -445,6 +516,7 @@ void WiFiScan::RunSetup() {
   access_points = new LinkedList<AccessPoint>();
   stations = new LinkedList<Station>();
   airtags = new LinkedList<AirTag>();
+  flippers = new LinkedList<Flipper>();
 
   #ifdef HAS_BT
     watch_models = new WatchModel[26] {
@@ -520,6 +592,14 @@ int WiFiScan::clearAirtags() {
   while (airtags->size() > 0)
     airtags->remove(0);
   Serial.println("airtags: " + (String)airtags->size());
+  return num_cleared;
+}
+
+int WiFiScan::clearFlippers() {
+  int num_cleared = flippers->size();
+  while (flippers->size() > 0)
+    flippers->remove(0);
+  Serial.println("Flippers: " + (String)flippers->size());
   return num_cleared;
 }
 
@@ -696,7 +776,7 @@ void WiFiScan::StartScan(uint8_t scan_mode, uint16_t color)
     this->startWiFiAttacks(scan_mode, color, text_table4[47]);
   else if (scan_mode == WIFI_ATTACK_AP_SPAM)
     this->startWiFiAttacks(scan_mode, color, " AP Beacon Spam ");
-  else if ((scan_mode == BT_SCAN_ALL) || (scan_mode == BT_SCAN_AIRTAG)){
+  else if ((scan_mode == BT_SCAN_ALL) || (scan_mode == BT_SCAN_AIRTAG) || (scan_mode == BT_SCAN_FLIPPER)){
     #ifdef HAS_BT
       RunBluetoothScan(scan_mode, color);
     #endif
@@ -784,7 +864,7 @@ void WiFiScan::startWiFiAttacks(uint8_t scan_mode, uint16_t color, String title_
   esp_wifi_set_promiscuous(true);
   esp_wifi_set_max_tx_power(82);
   this->wifi_initialized = true;
-#ifdef MARAUDER_FLIPPER
+  #ifdef MARAUDER_FLIPPER
     flipper_led.attackLED();
 	#elif defined(MARAUDER_V4)
     flipper_led.attackLED();
@@ -811,7 +891,7 @@ bool WiFiScan::shutdownWiFi() {
     esp_wifi_restore();
     esp_wifi_deinit();
 
-    #ifdef MARAUDER_FLIPPER
+     #ifdef MARAUDER_FLIPPER
       flipper_led.offLED();
 	  #elif defined(MARAUDER_V4)
       flipper_led.offLED();
@@ -834,14 +914,14 @@ bool WiFiScan::shutdownWiFi() {
 bool WiFiScan::shutdownBLE() {
   #ifdef HAS_BT
     if (this->ble_initialized) {
-      Serial.println("Shutting down BLE");  // Added
+      Serial.println("Shutting down BLE");
       pAdvertising->stop();
       pBLEScan->stop();
       
       pBLEScan->clearResults();
       NimBLEDevice::deinit();
 
-      #ifdef MARAUDER_FLIPPER
+       #ifdef MARAUDER_FLIPPER
         flipper_led.offLED();
 		#elif defined(MARAUDER_V4)
         flipper_led.offLED();
@@ -900,6 +980,7 @@ void WiFiScan::StopScan(uint8_t scan_mode)
   
   else if ((currentScanMode == BT_SCAN_ALL) ||
   (currentScanMode == BT_SCAN_AIRTAG) ||
+  (currentScanMode == BT_SCAN_FLIPPER) ||
   (currentScanMode == BT_ATTACK_SOUR_APPLE) ||
   (currentScanMode == BT_ATTACK_SWIFTPAIR_SPAM) ||
   (currentScanMode == BT_ATTACK_SPAM_ALL) ||
@@ -2100,11 +2181,7 @@ void WiFiScan::executeSpoofAirtag() {
 
         convertMacStringToUint8(airtags->get(i).mac, macAddr);
 
-        //macAddr[0] = 0x02;
-
         macAddr[5] -= 2;
-
-        // Serial.println("Using MAC: " + macToString(macAddr));
 
         // Do this because ESP32 BT addr is Base MAC + 2
         
@@ -2247,7 +2324,7 @@ void WiFiScan::RunBeaconScan(uint8_t scan_mode, uint16_t color)
     #endif
   }
 
-  #ifdef MARAUDER_FLIPPER
+   #ifdef MARAUDER_FLIPPER
     flipper_led.sniffLED();
   #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
@@ -2354,7 +2431,7 @@ void WiFiScan::RunRawScan(uint8_t scan_mode, uint16_t color)
   if (scan_mode != WIFI_SCAN_SIG_STREN)
     startPcap("raw");
 
-  #ifdef MARAUDER_FLIPPER
+   #ifdef MARAUDER_FLIPPER
     flipper_led.sniffLED();
   #elif defined(MARAUDER_V4)
     flipper_led.sniffLED();
@@ -2579,7 +2656,7 @@ void WiFiScan::RunBluetoothScan(uint8_t scan_mode, uint16_t color)
     }
     NimBLEDevice::init("");
     pBLEScan = NimBLEDevice::getScan(); //create new scan
-    if ((scan_mode == BT_SCAN_ALL) || (BT_SCAN_AIRTAG))
+    if ((scan_mode == BT_SCAN_ALL) || (scan_mode == BT_SCAN_AIRTAG) || (scan_mode == BT_SCAN_FLIPPER))
     {
       #ifdef HAS_SCREEN
         display_obj.TOP_FIXED_AREA_2 = 48;
@@ -2593,6 +2670,8 @@ void WiFiScan::RunBluetoothScan(uint8_t scan_mode, uint16_t color)
             display_obj.tft.drawCentreString(text_table4[41],120,16,2);
           else if (scan_mode == BT_SCAN_AIRTAG)
             display_obj.tft.drawCentreString("Airtag Sniff",120,16,2);
+          else if (scan_mode == BT_SCAN_FLIPPER)
+            display_obj.tft.drawCentreString("Flipper Sniff", 120, 16, 2);
           display_obj.touchToExit();
         #endif
         display_obj.tft.setTextColor(TFT_CYAN, TFT_BLACK);
@@ -2602,6 +2681,10 @@ void WiFiScan::RunBluetoothScan(uint8_t scan_mode, uint16_t color)
         pBLEScan->setAdvertisedDeviceCallbacks(new bluetoothScanAllCallback(), false);
       else if (scan_mode == BT_SCAN_AIRTAG) {
         this->clearAirtags();
+        pBLEScan->setAdvertisedDeviceCallbacks(new bluetoothScanAllCallback(), true);
+      }
+      else if (scan_mode == BT_SCAN_FLIPPER) {
+        this->clearFlippers();
         pBLEScan->setAdvertisedDeviceCallbacks(new bluetoothScanAllCallback(), true);
       }
     }
