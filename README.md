@@ -11,7 +11,9 @@
 <div align="center">
   
   ## ⬆ Update Highlights 11/23/24 ⬆ <br> Added New v1.1.0!
-  
+
+</div>
+
 - Add commands for sniffing airtags
 - Add ability to spoof airtags
 - Add commands for listing and spoofing airtags
@@ -20,9 +22,6 @@
 - Add commands for Flipper Zero Sniff
 - Add icon for Flipper Zero Sniff
 - Externalize some utils
-  
-
-</div>
 
 - **RGB LED enabled thanks to [**lsdlsd88**](https://github.com/lsdlsd88)**
 
