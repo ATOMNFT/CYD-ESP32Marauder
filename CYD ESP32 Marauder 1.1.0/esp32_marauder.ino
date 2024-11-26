@@ -212,9 +212,9 @@ void setup()
   */
 
   #ifdef HAS_SCREEN
-    display_obj.tft.drawCentreString("ESP32 Marauder", TFT_WIDTH/1.25, TFT_HEIGHT * 0.10, 1);
-    display_obj.tft.drawCentreString("JustCallMeKoko", TFT_WIDTH/1.25, TFT_HEIGHT * 0.17, 1);
-    display_obj.tft.drawCentreString(display_obj.version_number, TFT_WIDTH/1.25, TFT_HEIGHT * 0.24, 1);
+    display_obj.tft.drawCentreString("ESP32 Marauder", TFT_WIDTH/2, TFT_HEIGHT * 0.33, 1);
+    display_obj.tft.drawCentreString("JustCallMeKoko", TFT_WIDTH/2, TFT_HEIGHT * 0.5, 1);
+    display_obj.tft.drawCentreString(display_obj.version_number, TFT_WIDTH/2, TFT_HEIGHT * 0.66, 1);
     display_obj.tft.drawCentreString("Ported by ATOMNFT", TFT_WIDTH/1.25, TFT_HEIGHT * 0.36, 1); // Added this line
   #endif
 
@@ -275,7 +275,7 @@ void setup()
 
   #ifdef HAS_SCREEN
     display_obj.tft.setTextColor(TFT_GREEN, TFT_BLACK);
-    display_obj.tft.drawCentreString("Initializing...", TFT_WIDTH/1.25, TFT_HEIGHT * 0.44, 1);
+    display_obj.tft.drawCentreString("Initializing...", TFT_WIDTH/2, TFT_HEIGHT * 0.82, 1);
   #endif
 
   evil_portal_obj.setup();
