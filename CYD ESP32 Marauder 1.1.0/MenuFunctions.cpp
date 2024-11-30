@@ -1467,7 +1467,7 @@ void MenuFunctions::RunSetup()
   this->addNodes(&wifiMenu, text_table1[31], TFT_YELLOW, NULL, SNIFFERS, [this]() {
     this->changeMenu(&wifiSnifferMenu);
   });
-  this->addNodes(&wifiMenu, "Wardriving", TFT_GREEN, NULL, BEACON_SNIFF, [this]() {        // Change for CYD GPS if needed
+  this->addNodes(&wifiMenu, "Wardriving", TFT_GREEN, NULL, BEACON_SNIFF, [this]() {        // Comment out for CYD GPS off if needed
     this->changeMenu(&wardrivingMenu);
   });
   this->addNodes(&wifiMenu, text_table1[32], TFT_RED, NULL, ATTACKS, [this]() {
@@ -1546,7 +1546,8 @@ void MenuFunctions::RunSetup()
     });
   #endif
   
-  // Build Wardriving menu                                                                                Changed for CYD GPS if needed
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////  Comment out for CYD GPS off if needed
+  // Build Wardriving menu                                                                                
   wardrivingMenu.parentMenu = &wifiMenu; // Main Menu is second menu parent
   this->addNodes(&wardrivingMenu, text09, TFT_LIGHTGREY, NULL, 0, [this]() {
     this->changeMenu(wardrivingMenu.parentMenu);
@@ -1570,6 +1571,7 @@ void MenuFunctions::RunSetup()
       });
     }
   #endif
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////
   
   // Build WiFi attack menu
   wifiAttackMenu.parentMenu = &wifiMenu; // Main Menu is second menu parent

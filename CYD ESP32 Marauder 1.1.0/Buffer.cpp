@@ -27,51 +27,49 @@ void Buffer::createFile(String name, bool is_pcap){
   file.close();
 }
 
-void Buffer::open(bool is_pcap){
-  bufSizeA = 0;
-  bufSizeB = 0;
+void Buffer::open(bool is_pcap, uint32_t link_type) {
+    bufSizeA = 0;
+    bufSizeB = 0;
 
-  bufSizeB = 0;
+    writing = true;
 
-  writing = true;
-
-  if (is_pcap) {
-    write(uint32_t(0xa1b2c3d4)); // magic number
-    write(uint16_t(2)); // major version number
-    write(uint16_t(4)); // minor version number
-    write(int32_t(0)); // GMT to local correction
-    write(uint32_t(0)); // accuracy of timestamps
-    write(uint32_t(SNAP_LEN)); // max length of captured packets, in octets
-    write(uint32_t(105)); // data link type
-  }
+    if (is_pcap) {
+        write(uint32_t(0xa1b2c3d4)); // magic number
+        write(uint16_t(2)); // major version number
+        write(uint16_t(4)); // minor version number
+        write(int32_t(0)); // GMT to local correction
+        write(uint32_t(0)); // accuracy of timestamps
+        write(uint32_t(SNAP_LEN)); // max length of captured packets, in octets
+        write(uint32_t(link_type)); // data link type
+    }
 }
 
-void Buffer::openFile(String file_name, fs::FS* fs, bool serial, bool is_pcap) {
-  bool save_pcap = settings_obj.loadSetting<bool>("SavePCAP");
-  if (!save_pcap) {
-    this->fs = NULL;
-    this->serial = false;
-    writing = false;
-    return;
-  }
-  this->fs = fs;
-  this->serial = serial;
-  if (this->fs) {
-    createFile(file_name, is_pcap);
-  }
-  if (this->fs || this->serial) {
-    open(is_pcap);
-  } else {
-    writing = false;
-  }
+void Buffer::openFile(String file_name, fs::FS* fs, bool serial, bool is_pcap, uint32_t link_type) {
+    bool save_pcap = settings_obj.loadSetting<bool>("SavePCAP");
+    if (!save_pcap) {
+        this->fs = NULL;
+        this->serial = false;
+        writing = false;
+        return;
+    }
+    this->fs = fs;
+    this->serial = serial;
+    if (this->fs) {
+        createFile(file_name, is_pcap);
+    }
+    if (this->fs || this->serial) {
+        open(is_pcap, link_type); // Pass link type
+    } else {
+        writing = false;
+    }
 }
 
-void Buffer::pcapOpen(String file_name, fs::FS* fs, bool serial) {
-  openFile(file_name, fs, serial, true);
+void Buffer::pcapOpen(String file_name, fs::FS* fs, bool serial, uint32_t link_type) {
+    openFile(file_name, fs, serial, true, link_type); // Pass link type
 }
 
 void Buffer::logOpen(String file_name, fs::FS* fs, bool serial) {
-  openFile(file_name, fs, serial, false);
+    openFile(file_name, fs, serial, false, 105); // Use 105 for log files
 }
 
 void Buffer::add(const uint8_t* buf, uint32_t len, bool is_pcap){
@@ -157,30 +155,22 @@ void Buffer::write(const uint8_t* buf, uint32_t len){
   }
 }
 
-void Buffer::saveFs(){
-  file = fs->open(fileName, FILE_APPEND);
-  if (!file) {
-    Serial.println(text02+fileName+"'");
-    return;
-  }
-
-  if(useA){
-    if(bufSizeB > 0){
-      file.write(bufB, bufSizeB);
+void Buffer::saveFs() {
+    if (fs && !fileName.isEmpty()) {
+        file = fs->open(fileName, FILE_APPEND);
+        if (!file) {
+            Serial.println("Failed to open file for appending: " + fileName);
+            return;
+        }
+        if (useA) {
+            if (bufSizeB > 0) file.write(bufB, bufSizeB);
+            if (bufSizeA > 0) file.write(bufA, bufSizeA);
+        } else {
+            if (bufSizeA > 0) file.write(bufA, bufSizeA);
+            if (bufSizeB > 0) file.write(bufB, bufSizeB);
+        }
+        file.close(); // Ensure data is written to the SD card
     }
-    if(bufSizeA > 0){
-      file.write(bufA, bufSizeA);
-    }
-  } else {
-    if(bufSizeA > 0){
-      file.write(bufA, bufSizeA);
-    }
-    if(bufSizeB > 0){
-      file.write(bufB, bufSizeB);
-    }
-  }
-
-  file.close();
 }
 
 void Buffer::saveSerial() {
