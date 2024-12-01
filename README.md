@@ -20,15 +20,13 @@
 
 
 - **RGB LED enabled thanks to [**lsdlsd88**](https://github.com/lsdlsd88)**
-
-- **Detect Pwnagotchi 100% functional**
-    
+- **Detect Pwnagotchi 100% functional**    
 - **BLE/SwiftPair Spam now 100% functional**
-
 - **<a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal storage adjustment</a>** — Moves all portals into a folder instead of root of sd card.
-
 - **For info on adding an external antenna, click [here](https://github.com/Fr4nkFletcher/ESP32-Marauder-Cheap-Yellow-Display/blob/master/AntennaMod.md).**
+
 <br>
+
 <b>A beautiful fork of wifi Marauder, a suite of WiFi/Bluetooth offensive and defensive tools for the 2.8'' ESP32 Module ESP32-2432S028R WiFi+BT Dual-core 240X320 Smart Display.</b>
 <b>This fork features a few great fixes and customzations.</b>
 
