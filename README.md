@@ -9,6 +9,22 @@
 ---
 
   ## ⬆ Update Highlights 11/23/24 ⬆ <br> Added New v1.1.0!
+  
+  | Feature/Update                             | Description/Notes                                                                                                                                                        |
+|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| • Added logging to SD for Flipper/AirTag sniff | Thanks to Fr4nkFletcher                                                                                                                                               |
+| • Added Pcap capture of flipper data       | WIP as the pcap is malformed                                                                                                                                            |
+| • Added Flipper Zero Sniff                 |                                                                                                                                                                        |
+| • Airtag Sniffing/Spoofing                 |                                                                                                                                                                        |
+| • Working Pwnagotchi Detect on all models  |                                                                                                                                                                        |
+| • Flipper BLE Spam                         |                                                                                                                                                                        |
+| • Wardriving Menu added                    |                                                                                                                                                                        |
+| • RGB LED enabled                          | Thanks to lsdlsd88                                                                                                                                                    |
+| • Detect Pwnagotchi 100% functional        |                                                                                                                                                                        |
+| • BLE/SwiftPair Spam now 100% functional   |                                                                                                                                                                        |
+| • Evil Portal storage adjustment           | Moves all portals into a folder instead of root of SD card                                                                                                            |
+| • External antenna information             | [Click here](https://github.com/Fr4nkFletcher/ESP32-Marauder-Cheap-Yellow-Display/blob/master/AntennaMod.md) for info on adding an external antenna.                                                                                                                |
+
 
 - Added logging to SD for Flipper/AirTag sniff (Thanks to <a href=https://github.com/Fr4nkFletcher>Fr4nkFletcher</a>)
 - Added Pcap capture of flipper data (WIP as the pcap is malformed)
