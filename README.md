@@ -60,29 +60,69 @@
 <hr>
 <br>
 
-## 💾 SD portal fix 💾
+> ## 💾 **SD Portal Fix** 💾
+> 
+> This fix relocates all portals for Evil Portal to a dedicated folder on the SD card.  
+> When you install Marauder on the CYD, all the portals used in Evil Portal are stored on the root of the SD card. This can be a nuisance as PCAP and other files captured during sniffing also clutter the root directory.  
+> 
+> With this update, you can create a folder titled `portals` to store the HTML files.  
+> Visit the [Evil Portal](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff) section for the necessary files and detailed usage instructions.  
+> 
+> ---
+> 
+> ## **SD Setup for CM-Box**
+> 
+> If you flashed from the [Custom Marauder Flasher Tool for CYD](https://atomnft.github.io/CM-Box/flash0.html)  
+> or built from [CYD-ESP32Marauder](https://github.com/ATOMNFT/CYD-ESP32Marauder), you must create a folder on the root of your SD card titled `portals`.  
+> 
+> This is where you will store the [Evil Portal HTML files](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff), including the `index.html` file.
 
-  <b> This fix is to relocate all the portals for evil portal to a folder on the sd card. When you install Marauder on the CYD all the protals used in evil portal get stored on the root of the sd card. To me this is a nuisance as all the pcap and other files that are captured while sniffing get thrown on the root of the sd as well. I have gone through and adjusted the code so you may create a folder titled "portals" and store the html files there.<br>In the <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal</a> section are the files needed along with directions on usage. </b>
-  
-  ## SD Setup for CM-Box
-If you flashed from the <a href=https://atomnft.github.io/CM-Box/flash0.html>Custom Marauder Flasher tool for CYD</a> or built from <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder>CYD-ESP32Marauder</a> then You must create a folder on the root of your sd card titled "portals". This is where you will store the <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/Evil%20Portal%20Stuff>Evil Portal html files</a> along with the index.html file.
  
 <hr>
 <br>
-  
-## 🔧 To build this fork of Marauder from source 🔧
 
-- Head over to <a href=https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and start from step 1 in his tut.
-- When you get to the "LIBRARIES" section you can use the libs he has linked or the ones in this repo which are the same.
-- Now on the step in smoochiee's tutorial where he mentions to download the source code for Marauder, use the files from  <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%2013.10%20(NoGPS)>CYD ESP32 Marauder 13.10 (NoGPS)</a> or <a href=https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%201.0.0%20(NoGPS)>CYD ESP32 Marauder 1.0.0 (NoGPS)</a> instead (These files contain the sketch edits already). Then head back to <a href=https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY>smoochiee's tutorial</a> and Follow the rest of the steps provided by the legend himself and you should be good to go. I will be adding my own tutorial for flashing this build to your CYD very shortly.
+> ## 🔧 **Building This Fork of Marauder from Source** 🔧  
+> 
+> Follow these steps to build this fork of Marauder for your CYD module:  
+> 
+> ### Step 1: Start with Smoochiee’s Tutorial  
+> Head over to [Smoochiee's tutorial](https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY) and begin from Step 1.  
+> 
+> ### Step 2: Libraries Setup  
+> When you reach the **"LIBRARIES"** section:  
+> - You can use the libraries linked in Smoochiee's tutorial.  
+> - Alternatively, use the libraries provided in **this repository**, as they are identical.  
+> 
+> ### Step 3: Use Modified Source Files  
+> On the step where Smoochiee directs you to download Marauder's source code:  
+> - Instead of the original files, download the pre-modified files from one of the following:  
+>   - [CYD ESP32 Marauder 13.10 (NoGPS)](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%2013.10%20(NoGPS))  
+>   - [CYD ESP32 Marauder 1.0.0 (NoGPS)](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%201.0.0%20(NoGPS))
+>   - [CYD ESP32 Marauder 1.1.0 (NoGPS)](https://github.com/ATOMNFT/CYD-ESP32Marauder/tree/master/CYD%20ESP32%20Marauder%201.1.0)
+> These files include all necessary sketch edits.  
+> 
+> ### Step 4: Complete the Tutorial  
+> Return to [Smoochiee's tutorial](https://github.com/smoochiee/Marauder-FOR-CYD---CHEAP-YELLOW-DISPLAY) and continue with the remaining steps.  
+> 
+> ---
+> 
+> ### Coming Soon: My Custom Tutorial  
+> I’ll soon be adding my own guide for flashing this build to your CYD module. Stay tuned!
 
 <br>
 <hr>
 
-## ⚡ Web-flasher tool for simple install ⚡
- <a href=https://atomnft.github.io/CM-Box/flash0.html>Custom Marauder Flasher tool for CYD</a>
- <br>
- <b>Instructions are simple. Choose your hardware, then hit connect to start the flashing process on your CYD</b>
+## ⚡ Web-Flasher Tool for Simple Installation ⚡
+
+🚀 **Flash Your CYD Module with Ease**  
+Use the [Custom Marauder Flasher Tool for CYD](https://atomnft.github.io/CM-Box/flash0.html) to quickly and effortlessly flash your device.  
+
+### How It Works:  
+1️⃣ **Select Your Hardware**: Choose the correct CYD model from the dropdown menu.  
+2️⃣ **Connect**: Click the **"Connect"** button to start the flashing process.  
+3️⃣ **Done**: The tool will handle everything for you!  
+
+🎉 With this tool, flashing your CYD has never been simpler or faster.
   
   <br>
   <br>
