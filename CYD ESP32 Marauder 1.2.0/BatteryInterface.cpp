@@ -24,7 +24,7 @@ void BatteryInterface::RunSetup() {
   byte error;
   byte addr;
 
-  //Wire.begin(I2C_SDA, I2C_SCL);       // Comment out if using "//#define HAS_BATTERY" in configs.h file
+  Wire.begin(I2C_SDA, I2C_SCL);       // Comment out if using "//#define HAS_BATTERY" in configs.h file
 
   Serial.println("Checking for battery monitors...");
 
